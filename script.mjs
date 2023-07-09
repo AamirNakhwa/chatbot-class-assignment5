@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const API_KEY = '505cd211ccfb414b811153617230707';
         // API endpoint for fetching weather data based on location
-        const weatherAPI = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`
+        const weatherAPI = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`
         axios.get(weatherAPI)
             .then(function (response) {
                 const weatherData = response.data;
