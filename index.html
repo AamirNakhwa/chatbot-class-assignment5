@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="input-group">
+            <label for="location-input">Location:</label>
+            <input type="text" id="location-input" class="location-input" placeholder="Enter location (City) here">
+            <button id="get-weather-button">Get Weather</button>
+        </div>
+        
+        <!-- style="display: none" -->
+        <div id="loader" class="loader hidden"></div>
+        <div id="div-result" class="hidden" >
+            <h3>Weather for <b><span id="location-display">[Location_Name]</span></b></h3>
+            <img class="weather-image" src="" alt="Weather Image">
+            <div id="div-output">
+            
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.mjs"></script>
+</body>
+</html>
