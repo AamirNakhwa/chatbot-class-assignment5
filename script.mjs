@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const resultcontainer = document.getElementById("div-result");
+    const message = document.getElementById("message");
+    
     //resultcontainer.style.display = 'none'
 
     const locationInputElement = document.getElementById("location-input");
@@ -44,12 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 resultcontainer.classList.remove('hidden');
             })
             .catch(function (error) {
-                console.error("Error fetching weather data:", error);
+                console.log("Error fetching weather data:", error);
                 resultcontainer.classList.add('hidden');
+                message.innerText = 'Error fetching data.'
             });
         }
         catch{
             resultcontainer.classList.add('hidden');
+            message.innerText = 'Something went wrong.'
         }
         
         document.getElementById('loader').classList.add('hidden');
