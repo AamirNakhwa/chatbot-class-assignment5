@@ -82,3 +82,7 @@ button:focus {
   .hidden {
     display: none;
   }
+
+  .message{
+    color: red;
+  }
